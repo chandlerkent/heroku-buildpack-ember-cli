@@ -179,5 +179,9 @@ if test -d $build_dir/bower_components; then
 fi
 
 status "Building Ember CLI application $build_env distribution"
-ls -R node_modules/
 node_modules/ember-cli/bin/ember build --environment $build_env | indent
+
+# Update the PATH
+status "Building runtime environment"
+mkdir -p $build_dir/.profile.d
+echo "export PATH=\"\$HOME/vendor/node/bin:\$HOME/bin:\$HOME/node_modules/.bin:\$PATH\";" > $build_dir/.profile.d/nodejs.sh
