@@ -179,4 +179,5 @@ if test -d $build_dir/bower_components; then
 fi
 
 status "Building Ember CLI application $build_env distribution"
+ls -R node_modules/
 node_modules/ember-cli/bin/ember build --environment $build_env | indent
