@@ -185,6 +185,3 @@ node_modules/ember-cli/bin/ember build --environment $build_env | indent
 status "Building runtime environment"
 mkdir -p $build_dir/.profile.d
 echo "export PATH=\"\$HOME/vendor/node/bin:\$HOME/bin:\$HOME/node_modules/.bin:\$PATH\";" > $build_dir/.profile.d/nodejs.sh
-
-ls -R $build_dir
-ls -R .
